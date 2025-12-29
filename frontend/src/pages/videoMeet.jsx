@@ -16,7 +16,7 @@ faLinkSlash,
 faComments,
 faPhoneSlash,} from "@fortawesome/free-solid-svg-icons";
 
-const server_url = "http://localhost:8080";
+const server_url = "https://video-meet-project.onrender.com";
 
 export default function VideoMeetComponent() {
     const socketRef = useRef(null);
