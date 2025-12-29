@@ -1,0 +1,386 @@
+/* homeComponent.css */
+
+/* ============================================
+    CONTAINER & LAYOUT
+   ============================================ */
+
+.home-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF2A00 0%, #810101 100%);
+  display: flex;
+  flex-direction: column;
+}
+
+/* ============================================
+    NAVBAR STYLES
+   ============================================ */
+
+.home-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand-name {
+  font-size: 24px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #FF2A00 0%, #810101 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+}
+
+.navbar-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.history-button {
+  color : #810101;
+  background-color: #ffcaca;
+}
+
+.history-button:hover {
+  background:#d89486 ;
+  transform: translateY(-2px);
+}
+
+.logout-button {
+  background: rgba(245, 101, 101, 0.1);
+  color: #f56565;
+}
+
+.logout-button:hover {
+  background: rgba(245, 101, 101, 0.2);
+  transform: translateY(-2px);
+}
+
+.button-icon {
+  font-size: 18px;
+}
+
+/* ============================================
+    MAIN CONTENT SECTION
+   ============================================ */
+
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1400px;
+  width: 100%;
+  align-items: center;
+}
+
+/* ============================================
+   LEFT SECTION - MEETING INPUT
+   ============================================ */
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.welcome-text {
+  color: white; 
+}
+
+.main-title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+  color: white;
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #800000 0%, black 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.main-description {
+  font-size: 18px;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+}
+
+.meeting-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.action-card {
+  background: white;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.action-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2d3748;
+  margin: 0 0 20px 0;
+}
+
+.input-group {
+  display: flex;
+  gap: 12px;
+}
+
+.meeting-input {
+  flex: 1;
+  padding: 14px 18px;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.meeting-input:focus {
+  border-color: #ff6060;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.meeting-input::placeholder {
+  color: #a0aec0;
+}
+
+
+.join-button {
+  color: white;
+  background-color: linear-gradient(135deg, #FF2A00 0%, #810101 100%) !important;
+  border: none;
+}
+
+.join-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.join-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.separator::before,
+.separator::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #e2e8f0;
+}
+
+.separator-text {
+  padding: 0 16px;
+  color: #a0aec0;
+  font-size: 14px;
+  font-weight: 500;
+}
+  /* background: linear-gradient(135deg, #FF2A00 0%, #810101 100%); */
+.create-meeting-button {
+  width: 100%;
+  padding: 14px 24px;
+  background: rgb(255, 209, 207);
+  color: #FF2A00;
+  border: 2px solid rgb(255, 143, 143);
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.create-meeting-button:hover {
+  background: rgb(255, 177, 177);
+  border-color: rgb(234, 102, 102);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+    RIGHT SECTION - IMAGE
+   ============================================ */
+
+.right-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover .hero-image {
+  transform: scale(1.05);
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 30px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  display: flex;
+  justify-content: center;
+}
+
+.overlay-badge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 12px 24px;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.badge-icon {
+  font-size: 24px;
+}
+
+.badge-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* ============================================
+    RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 1024px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .right-section {
+    order: -1;
+  }
+
+  .main-title {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-navbar {
+    padding: 12px 20px;
+  }
+
+  .brand-name {
+    font-size: 20px;
+  }
+
+  .button-text {
+    display: none;
+  }
+
+  .nav-button {
+    padding: 10px;
+  }
+
+  .main-title {
+    font-size: 32px;
+  }
+
+  .main-description {
+    font-size: 16px;
+  }
+
+  .action-card {
+    padding: 24px;
+  }
+
+  .input-group {
+    flex-direction: column;
+  }
+
+  .join-button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 20px 12px;
+  }
+
+  .main-title {
+    font-size: 28px;
+  }
+
+  .action-card {
+    padding: 20px;
+  }
+
+  .meeting-input {
+    font-size: 14px;
+  }
+
+  .join-button,
+  .create-meeting-button {
+    font-size: 14px;
+  }
+}

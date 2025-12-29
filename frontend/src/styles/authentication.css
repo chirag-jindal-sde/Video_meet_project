@@ -1,0 +1,45 @@
+.authentication {
+    background: linear-gradient(135deg, #FF2A00 0%, #810101 100%)!important;
+}
+
+.button-signin.MuiButton-contained {
+    background: linear-gradient(135deg, #FF2A00 0%, #810101 100%);
+    color: white;
+}
+
+.button-signin.MuiButton-contained:hover {
+    background: linear-gradient(135deg, #FF2A00 0%, #810101 100%) !important;
+}
+
+.button-signin.MuiButton-outlined {
+    border-color: #FF2A00;
+    color: #FF2A00;
+}
+
+
+.button-signup.MuiButton-contained {
+    background: linear-gradient(135deg, #FF2A00 0%, #810101 100%);
+    color: white;
+    }
+
+.button-signup.MuiButton-contained:hover {
+    background: linear-gradient(135deg, #FF2A00 0%, #810101 100%) !important;
+}
+
+.button-signup.MuiButton-outlined {
+    border-color: #FF2A00;
+    color: #FF2A00;
+}
+
+.button-down {
+    background: linear-gradient(135deg, #FF2A00 0%, #810101 100%) !important;
+}
+
+.custom-textfield .MuiOutlinedInput-root.Mui-focused fieldset {
+  border-color: #FF2A00 ;
+  border-width: 2px;
+}
+
+.custom-textfield label.Mui-focused {
+  color: #FF2A00 ;
+}

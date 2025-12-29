@@ -1,0 +1,455 @@
+/* historyComponent.css */
+
+/* ============================================
+    CONTAINER & LAYOUT
+   ============================================ */
+
+.history-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF2A00 0%, #810101 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+/* ============================================
+    HEADER SECTION
+   ============================================ */
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(-5px);
+}
+
+.back-icon {
+  font-size: 20px;
+}
+
+.history-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: white;
+  margin: 0;
+  text-align: center;
+  flex: 1;
+}
+
+.clear-all-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: rgba(245, 101, 101, 0.2);
+  border: 2px solid rgba(245, 101, 101, 0.4);
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.clear-all-button:hover {
+  background: rgba(245, 101, 101, 0.4);
+  transform: translateY(-2px);
+}
+
+.clear-icon {
+  font-size: 18px;
+}
+
+/* ============================================
+   SEARCH SECTION
+   ============================================ */
+
+/* ============================================
+   HISTORY CONTENT
+   ============================================ */
+
+.history-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  padding: 60px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.empty-icon {
+  font-size: 80px;
+  margin-bottom: 20px;
+  opacity: 0.5;
+}
+
+.empty-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 12px 0;
+}
+
+.empty-description {
+  font-size: 16px;
+  color: #718096;
+  text-align: center;
+  max-width: 500px;
+  line-height: 1.6;
+  margin: 0 0 30px 0;
+}
+
+.start-meeting-button {
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-meeting-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+/* ============================================
+   MEETING HISTORY LIST
+   ============================================ */
+
+.history-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: 24px;
+}
+
+.meeting-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  animation: slideUp 0.5s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.meeting-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.meeting-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #f7fafc;
+}
+
+.meeting-icon {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.meeting-info {
+  flex: 1;
+  min-width: 0;
+  align-items: center;
+}
+
+.meeting-id-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 6px 0;
+}
+
+.meeting-id {
+  font-size: 18px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0;
+  word-break: break-all;
+}
+
+/* ============================================
+   MEETING DETAILS
+   ============================================ */
+
+.meeting-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.detail-icon {
+  font-size: 20px;
+  width: 30px;
+  text-align: center;
+}
+
+.detail-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.detail-label {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0aec0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.detail-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+/* ============================================
+   MEETING ACTIONS
+   ============================================ */
+
+.meeting-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border: 2px solid;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  min-width: 90px;
+}
+
+.rejoin-button {
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border-color: rgba(102, 126, 234, 0.3);
+}
+
+.rejoin-button:hover {
+  background: rgba(102, 126, 234, 0.2);
+  border-color: rgba(102, 126, 234, 0.5);
+  transform: translateY(-2px);
+}
+
+.copy-button {
+  background: rgba(72, 187, 120, 0.1);
+  color: #48bb78;
+  border-color: rgba(72, 187, 120, 0.3);
+}
+
+.copy-button:hover {
+  background: rgba(72, 187, 120, 0.2);
+  border-color: rgba(72, 187, 120, 0.5);
+  transform: translateY(-2px);
+}
+
+.delete-button {
+  background: rgba(245, 101, 101, 0.1);
+  color: #f56565;
+  border-color: rgba(245, 101, 101, 0.3);
+}
+
+.delete-button:hover {
+  background: rgba(245, 101, 101, 0.2);
+  border-color: rgba(245, 101, 101, 0.5);
+  transform: translateY(-2px);
+}
+
+.action-icon {
+  font-size: 16px;
+}
+
+/* ============================================
+   FOOTER STATS
+   ============================================ */
+
+.history-footer {
+  max-width: 1200px;
+  width: 100%;
+  margin: 20px auto 0;
+  padding: 20px 0;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.stat-value {
+  font-size: 32px;
+  font-weight: 700;
+  color: white;
+}
+
+.stat-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+@media (max-width: 768px) {
+  .history-header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: stretch;
+  }
+
+  .history-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .back-button,
+  .clear-all-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .history-list {
+    grid-template-columns: 1fr;
+  }
+
+  .meeting-actions {
+    flex-direction: column;
+  }
+
+  .action-button {
+    width: 100%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .history-container {
+    padding: 12px;
+  }
+
+  .history-title {
+    font-size: 24px;
+  }
+
+  .meeting-card {
+    padding: 16px;
+  }
+
+  .empty-state {
+    padding: 40px 20px;
+  }
+
+  .empty-icon {
+    font-size: 60px;
+  }
+
+  .empty-title {
+    font-size: 22px;
+  }
+
+  .empty-description {
+    font-size: 14px;
+  }
+}
